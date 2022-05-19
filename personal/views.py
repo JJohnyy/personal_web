@@ -1,7 +1,13 @@
 from django.shortcuts import render
-
+from .models import Item
 
 # Create your views here.
+
+
 def index(request):
-    return render(request,'personal-web/index.html')
+    items = Item.objects.all()
+    context = {
+        'items': items
+    }
+    return render(request,'personal-web/index.html', context)
 
