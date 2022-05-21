@@ -19,3 +19,4 @@ def add_item(request):
 
         return redirect('get_index')
     return render(request,'personal-web/add_item.html')
+    
