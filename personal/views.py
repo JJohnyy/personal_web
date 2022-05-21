@@ -11,3 +11,5 @@ def index(request):
     }
     return render(request,'personal-web/index.html', context)
 
+def add_item(request):
+    return render(request,'personal-web/index.html')
