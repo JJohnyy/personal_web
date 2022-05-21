@@ -12,4 +12,7 @@ def index(request):
     return render(request,'personal-web/index.html', context)
 
 def add_item(request):
-    return render(request,'personal-web/index.html')
+    if request.method == 'POST':
+        name = request.POST.get('item_name')
+        done = 'done' in request.POST
+    return render(request,'personal-web/add_item.html')

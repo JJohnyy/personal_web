@@ -7,6 +7,26 @@
     <title>add items</title>
 </head>
 <body>
-    
+    <h1>add a todo item</h1>
+    <form action="POST" action="add">
+        {% csrf_token %}
+        <div>
+            <p>
+                <label for="id_name"></label>
+                <input type="text" id="id_name" name="item_name">
+            </p>
+        </div>
+        <div>
+            <p>
+                <label for="id_done"></label>
+                <input type="checkbox" id="id_done" name="done">
+            </p>
+        </div>
+        <div>
+            <p>
+                <button type="submit">Add Item</button>
+            </p>
+        </div>
+    </form>
 </body>
 </html>
