@@ -17,6 +17,5 @@ def add_item(request):
         done = 'done' in request.POST
         Item.objects.create(name=name, done=done)
 
-        return redirect('get_index')
-    return render(request,'personal-web/add_item.html')
-    
+        return redirect('index')
+    return render( request, 'personal-web/add_item.html' )
